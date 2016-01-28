@@ -2,8 +2,8 @@
 
 int IRpin = 3;  // pin for the IR sensor
 int LED1 = 7;    // LED pin  
-int LED2 = 8;
-int LED3 = 10;
+int LED2 = 8;     // LED on pin 8
+int LED3 = 10;  
 int LED4 = 11;
 int LED5 = 12;
 int LED6 = 9;
