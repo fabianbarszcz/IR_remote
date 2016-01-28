@@ -1,3 +1,4 @@
+/*  controlling LEDs with IR remote by fabianbarszcz  */
 #include <IRremote.h>
 
 int IRpin = 3;  // pin for the IR sensor
@@ -10,13 +11,13 @@ int LED6 = 9;
 
 IRrecv irrecv(IRpin);
 decode_results results;
-#define code1 16724175
+#define code1 16724175  //put here your IR code
 #define code2 16718055
 #define code3 16743045
 #define code4 16716015
 #define code5 16726215
 #define code6 16734885
-int z=300;    //delay 
+int z=300;    //delay - avoids recieving continuous signal
 int LED1on=0; // initializing LEDon as true
 int LED2on=0;
 int LED3on=0;
@@ -146,7 +147,7 @@ void loop()
               }
       break;
       }
-      /*
+      /*                                            uncommect to get info about your remote standard
       if (results.decode_type == NEC) {
       Serial.print("NEC: ");
       } else if (results.decode_type == SONY) {
